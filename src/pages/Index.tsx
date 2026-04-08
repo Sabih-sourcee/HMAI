@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
 
-const API_KEY = "API_KEY_HERE";
+const API_KEY = "AIzaSyD2aKYpzSrdpsH2SaBfCmrmuMAGHrOlp4o";
 const SYSTEM_PROMPT = "You are HMA Study Assistant, an AI tutor for O-Level History and Geography students. You answer only from Sir Hamza Ali's official study material. Be helpful, concise, and accurate.";
 
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite-preview-06-17:generateContent?key=${API_KEY}`;
