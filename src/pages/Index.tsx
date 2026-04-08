@@ -61,7 +61,7 @@ Aug 1942: Gandhi launched the Quit India Movement; the British arrested the enti
 1943–1945: Subhas Chandra Bose led the Indian National Army (INA) alongside Japanese forces to liberate India.
 1945: Over 2.5 million Indian soldiers served in WWII, making it the largest volunteer army in history.`;
 
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite-preview-06-17:generateContent?key=${API_KEY}`;
+const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
 interface Message {
   role: "user" | "ai";
