@@ -143,6 +143,15 @@ export default function Index() {
         }),
       });
       const data = await res.json();
+
+      if (!res.ok) {
+        const errMsg = data?.error?.status === "RESOURCE_EXHAUSTED"
+          ? "⚠️ API quota exceeded. Please try again later or contact Sir Hamza."
+          : data?.error?.message || "Sorry, I couldn't generate a response.";
+        setMessages((prev) => [...prev, { role: "ai", text: errMsg, time: getTime() }]);
+        return;
+      }
+
       const aiText =
         data?.candidates?.[0]?.content?.parts?.[0]?.text ?? "Sorry, I couldn't generate a response.";
       setMessages((prev) => [...prev, { role: "ai", text: aiText, time: getTime() }]);
