@@ -141,7 +141,7 @@ export default function Index() {
           "Authorization": `Bearer ${API_KEY}`,
         },
         body: JSON.stringify({
-          model: "google/gemini-2.0-flash-exp:free",
+          model: "google/gemini-2.0-flash:free",
           messages: [
             { role: "system", content: SYSTEM_PROMPT },
             { role: "user", content: text },
