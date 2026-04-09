@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
 
-const API_KEY = "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";
+const API_KEY = "AIzaSyDGq_uVSDx5kco36qrOpwrxogdq77Cx33k";
 const SYSTEM_PROMPT = `You are the official AI Study Assistant for Hamza Ali's O-Level History & Geography course, built exclusively for students enrolled at CambridgePST Tutor (cambridgepsttutor.com).
 
 Your sole knowledge source is Hamza Ali's official O-Level study notes and past papers. You must NEVER answer from general AI knowledge or outside sources under any circumstance.
@@ -61,7 +61,7 @@ Aug 1942: Gandhi launched the Quit India Movement; the British arrested the enti
 1943–1945: Subhas Chandra Bose led the Indian National Army (INA) alongside Japanese forces to liberate India.
 1945: Over 2.5 million Indian soldiers served in WWII, making it the largest volunteer army in history.`;
 
-const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
+const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
 interface Message {
   role: "user" | "ai";
@@ -134,30 +134,26 @@ export default function Index() {
     setLoading(true);
 
     try {
-      const res = await fetch(OPENROUTER_URL, {
+      const res = await fetch(GEMINI_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${API_KEY}`,
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "google/gemini-2.5-flash",
-          messages: [
-            { role: "system", content: SYSTEM_PROMPT },
-            { role: "user", content: text },
-          ],
+          contents: [{ role: "user", parts: [{ text }] }],
+          systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
         }),
       });
       const data = await res.json();
 
       if (!res.ok) {
-        const errMsg = data?.error?.message || "Sorry, I couldn't generate a response.";
+        const errMsg = data?.error?.status === "RESOURCE_EXHAUSTED"
+          ? "⚠️ API quota exceeded. Please try again later or contact Sir Hamza."
+          : data?.error?.message || "Sorry, I couldn't generate a response.";
         setMessages((prev) => [...prev, { role: "ai", text: errMsg, time: getTime() }]);
         return;
       }
 
       const aiText =
-        data?.choices?.[0]?.message?.content ?? "Sorry, I couldn't generate a response.";
+        data?.candidates?.[0]?.content?.parts?.[0]?.text ?? "Sorry, I couldn't generate a response.";
       setMessages((prev) => [...prev, { role: "ai", text: aiText, time: getTime() }]);
     } catch {
       setMessages((prev) => [
