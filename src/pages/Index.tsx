@@ -134,26 +134,30 @@ export default function Index() {
     setLoading(true);
 
     try {
-      const res = await fetch(GEMINI_URL, {
+      const res = await fetch(OPENROUTER_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${API_KEY}`,
+        },
         body: JSON.stringify({
-          contents: [{ role: "user", parts: [{ text }] }],
-          systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+          model: "google/gemini-2.0-flash-exp:free",
+          messages: [
+            { role: "system", content: SYSTEM_PROMPT },
+            { role: "user", content: text },
+          ],
         }),
       });
       const data = await res.json();
 
       if (!res.ok) {
-        const errMsg = data?.error?.status === "RESOURCE_EXHAUSTED"
-          ? "⚠️ API quota exceeded. Please try again later or contact Sir Hamza."
-          : data?.error?.message || "Sorry, I couldn't generate a response.";
+        const errMsg = data?.error?.message || "Sorry, I couldn't generate a response.";
         setMessages((prev) => [...prev, { role: "ai", text: errMsg, time: getTime() }]);
         return;
       }
 
       const aiText =
-        data?.candidates?.[0]?.content?.parts?.[0]?.text ?? "Sorry, I couldn't generate a response.";
+        data?.choices?.[0]?.message?.content ?? "Sorry, I couldn't generate a response.";
       setMessages((prev) => [...prev, { role: "ai", text: aiText, time: getTime() }]);
     } catch {
       setMessages((prev) => [
