@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
 
-const API_KEY = "AIzaSyDGq_uVSDx5kco36qrOpwrxogdq77Cx33k";
+const API_KEY = "AIzaSyCgiv4xmptxUi_-yr8ItNS1L3ZXlxJU1zI";
 const SYSTEM_PROMPT = `You are the official AI Study Assistant for Hamza Ali's O-Level History & Geography course, built exclusively for students enrolled at CambridgePST Tutor (cambridgepsttutor.com).
 
 Your sole knowledge source is Hamza Ali's official O-Level study notes and past papers. You must NEVER answer from general AI knowledge or outside sources under any circumstance.
