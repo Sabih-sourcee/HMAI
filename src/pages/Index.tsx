@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
 
-const API_KEY = "AIzaSyCgiv4xmptxUi_-yr8ItNS1L3ZXlxJU1zI";
+const API_KEY = "AIzaSyDGq_uVSDx5kco36qrOpwrxogdq77Cx33k";
 const SYSTEM_PROMPT = `You are the official AI Study Assistant for Hamza Ali's O-Level History & Geography course, built exclusively for students enrolled at CambridgePST Tutor (cambridgepsttutor.com).
 
 Your sole knowledge source is Hamza Ali's official O-Level study notes and past papers. You must NEVER answer from general AI knowledge or outside sources under any circumstance.
@@ -61,7 +61,7 @@ Aug 1942: Gandhi launched the Quit India Movement; the British arrested the enti
 1943–1945: Subhas Chandra Bose led the Indian National Army (INA) alongside Japanese forces to liberate India.
 1945: Over 2.5 million Indian soldiers served in WWII, making it the largest volunteer army in history.`;
 
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite-preview-06-17:generateContent?key=${API_KEY}`;
 
 interface Message {
   role: "user" | "ai";
