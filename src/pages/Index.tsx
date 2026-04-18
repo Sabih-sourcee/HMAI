@@ -31,8 +31,36 @@ The British East India Company (EIC) & Expansion in India
 1799: The Fourth Anglo-Mysore War ended with the death of Tipu Sultan and the fall of Seringapatam.
 1818: The Third Anglo-Maratha War concluded, effectively dismantling the Maratha Empire and leaving the EIC as the dominant power.
 1848–1856: Lord Dalhousie implemented the Doctrine of Lapse, annexing states like Satara, Jhansi, and Nagpur.
-1857: The Indian Rebellion (First War of Independence) broke out in Meerut on May 10.
 1858: The Government of India Act transferred power from the EIC to the British Crown, ending Company rule.
+
+War of Independence 1857–1858
+
+Overview: Fought between the British and Indians from 1857 to 1858. It started in Meerut and ended in Allahabad. The British called it the "Indian Mutiny." The outcome was a British victory — the Mughal Empire was dissolved and direct British Crown Rule (the Raj) began.
+
+Causes:
+1. Doctrine of Lapse (1852): Lord Dalhousie's policy stating that if a ruler had no legal male heir, the territory would be annexed by the British. States captured included Sitara, Jhansi, Udaipur, Nagpur, and Karoli.
+2. Agrarian Policy: Zamindars and landlords were required to produce property documents or face confiscation. Those who complied faced higher taxes.
+3. Language Policy (1824–34): English replaced Persian and Sanskrit as the official language, offending educated Indians.
+4. Anti-Religious Laws: Purdah was banned, widow remarriage was legalized, and Sati was banned in 1829 — violating Hindu cultural practices.
+5. Propagation of Christianity: British missionaries were invited to convert Indians, while Islam and Hinduism were publicly defamed.
+6. Greased Cartridge Issue: The new Lee-Enfield rifle cartridges were greased with pig fat (haram for Muslims) and cow fat (sacred to Hindus). Both communities refused, and this was the direct trigger of the mutiny.
+7. Westernization: Roads, railways, and co-education were introduced. Indians resisted the rapid cultural change.
+8. Attack on Afghanistan: The British sought Indian army support to invade Afghanistan. Muslims refused to fight fellow Muslims, and Hindus refused to leave India. The British disbanded the Indian army, leaving soldiers unemployed, who then joined the revolt.
+9. Further Cruelties: Azan was banned, a tax on beards was imposed, Indian soldiers were underpaid compared to British soldiers, taxes rose, corruption spread, and Indians were denied equal employment.
+
+Reasons for Failure (Indian Perspective):
+1. Lack of Unity: There was no common goal. Hindus wanted Indian control, Muslims wanted Mughal restoration, and regional rulers had personal agendas. Sikhs actively helped the British, and Punjab and Kashmir sent troops to the British side.
+2. Weak Mughal Army / British Military Superiority: The Mughals focused on a lavish lifestyle; soldiers were untrained and weapons outdated against the modern, disciplined British military supplied by local rulers who sided with them.
+3. Lack of Leadership: Bahadur Shah Zafar was aged, weak, and unable to unite the forces. Rani Lakshmi Bai and Nana Sahib also failed to consolidate command.
+4. Traitors: The British bribed key figures including Maulvi Razaa Billi (Razab Ali) and Hakim Ahsanullah, who blew up the royal ammunition depot at Delhi, weakening Indian resistance.
+5. Lack of Resources: There was insufficient food and weapons; existing arms were rusted and obsolete.
+6. Communication Disadvantage: The British used roads and railways for fast troop movement, while Indians relied on elephants and horses, leading to slower response times and strategic defeats.
+
+Outcome: British victory, dissolution of the Mughal Empire, and the start of direct British Crown Rule over India (commonly called "Gora Rule").
+
+Exam Marking Scheme Guidance for War of Independence:
+- 7-Mark (b) Questions: Explain reasons (no judgement needed). Level 3 = max. Pick 2–3 reasons (lack of unity, British military superiority, weak leadership, traitors, lack of resources) and EXPLAIN why each caused failure — do not just list. Examiner deducts marks for description-only answers.
+- 14-Mark (c) Questions: Level descriptors — L1 (1–2): simplistic statement; L2 (3–6): description only; L3 (7–10): explains ONE reason in depth; L4 (9–13): explains MORE THAN ONE reason, must include lack of unity; L5 (14): as L4 plus a judgement/evaluation. To hit L5, explain lack of unity in depth (mandatory), explain 2+ other reasons, and conclude with a judgement. For cause-based questions (e.g., greased cartridge or Doctrine of Lapse), connect cause → Indian reaction → war, then structure as: YES it was important because [explain] → BUT other causes also mattered [explain 2+] → Judgement. No judgement = stuck at L4 max.
 
 World War II (1939–1945)
 
