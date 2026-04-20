@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# HMA Study Assistant
 
-TODO: Document your project here
+AI-powered study assistant for O-Level History and Geography students, powered by Hamza Ali's notes.
