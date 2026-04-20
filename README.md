@@ -4,27 +4,73 @@ AI-powered study assistant for O-Level History and Geography students, powered b
 
 ## Setup
 
-1. Install dependencies:
+### Option 1: Supabase (Recommended - Secure & Free)
+
+1. **Install dependencies:**
    ```bash
    npm install
    ```
 
-2. Configure API key:
+2. **Set up Supabase:**
+   - Follow [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) for detailed instructions
+   - Create Supabase project at https://supabase.com
+   - Deploy Edge Function with your Gemini API key
+
+3. **Configure frontend:**
    - Copy `.env.example` to `.env`
-   - Get a Gemini API key from https://makersuite.google.com/app/apikey
-   - Add your key to the `.env` file:
+   - Add your Supabase URL and anon key:
      ```
-     VITE_GEMINI_API_KEY=your_actual_api_key_here
+     VITE_SUPABASE_URL=https://your-project-ref.supabase.co
+     VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
      ```
 
-3. Run locally:
+4. **Run locally:**
    ```bash
    npm run dev
    ```
 
-4. Deploy to GitHub Pages:
+### Option 2: Local Backend (Development Only)
+
+1. **Install frontend dependencies:**
    ```bash
-   npm run deploy
+   npm install
    ```
 
-**Note:** The `.env` file is gitignored and will never be committed to protect your API key.
+2. **Install backend dependencies:**
+   ```bash
+   cd backend
+   npm install
+   ```
+
+3. **Configure backend:**
+   - Copy `backend/.env.example` to `backend/.env`
+   - Add your Gemini API key to `backend/.env`
+
+4. **Run both servers:**
+   ```bash
+   # Terminal 1 - Backend
+   cd backend
+   npm start
+   
+   # Terminal 2 - Frontend
+   cd ..
+   npm run dev
+   ```
+
+## Deployment
+
+### GitHub Pages (Frontend Only)
+```bash
+npm run deploy
+```
+
+### Supabase (Backend API)
+```bash
+supabase functions deploy chat
+```
+
+## Security
+
+- ✅ **Supabase**: API key stored securely in Edge Function secrets
+- ⚠️ **Local Backend**: API key in `.env` file (never commit)
+- ❌ **Direct API**: API key exposed in frontend (NOT recommended)

@@ -1,0 +1,4 @@
+[functions]
+# Configure Edge Functions
+[functions.chat]
+verify_jwt = false
